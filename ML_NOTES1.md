@@ -1,4 +1,4 @@
-
++
 # Data Science NOTES from Ng Course - Oreilly
 
 There are a lot of statistical tests and information. Mostly for the purpose of statistical analysis. You do not need all of these for data science.
@@ -75,10 +75,10 @@ Where
 - $\beta_1$ the coeficient/slope of x
 - $\epsilon$ is the error term we are trying to minimise
 
-[More Theory on Youtube](https://www.youtube.com/watch?v=owI7zxCqNY0)
+[More Theory on Youtube](https://www.youtube.com/watch?v=owI7zxCqNY0&list=RDCMUCbdsyFBdG0Fmjroqk-ZoPcg&start_radio=1)
 
 
-
+ 
 
 ## Model Statistical Outputs:
 
@@ -610,18 +610,18 @@ Second row: The images of zeros, the positive class:
 * 395 were incorrectly classified as 0s. **False negatives**
 * 5528 were correctly classified as 0s. **True positives**
 
-## Precision
+### Precision - _"How many selected items are relevant?"_
 
-**Precision** measures the accuracy of positive predictions of your classifier. Also called the `precision` of the classifier. Focus is on the second row of the matrix.
+**Precision**  - Measures the accuracy of positive predictions of your classifier. Also called the `precision` of the classifier. Focus is on the second row of the matrix.
 
 $$\textrm{precision} = \frac{\textrm{True Positives}}{\textrm{True Positives} + \textrm{False Positives}}$$
 
-## Recall
+### Recall - _"How many relevant items are selected?"_
 `Precision` is typically used with `recall` (`Sensitivity` or `True Positive Rate`). The ratio of positive instances that are correctly detected by the classifier. This will be interested in the bottom row of the Confusion Matrix. 
 
 $$\textrm{recall} = \frac{\textrm{True Positives}}{\textrm{True Positives} + \textrm{False Negatives}}$$
 
-## F1 Score
+### F1 Score
 
 $F_1$ score is the harmonic mean of precision and recall. Regular mean gives equal weight to all values which we don't always want. Harmonic mean gives more weight to low values.
 
@@ -629,11 +629,11 @@ $$F_1=\frac{2}{\frac{1}{\textrm{precision}}+\frac{1}{\textrm{recall}}}=2\times \
 
 The $F_1$ score favours classifiers that have similar precision and recall.
 
-## Accuracy 
+### Accuracy 
 = (TP+TN)/(TP+TN+FN+FP) 
 $$\textrm{Accuracy} = \frac{\textrm{True Positives + True Negatives}}{\textrm{True Positives + False Positives} + \textrm{False Negatives + True Negatives}}$$
 
-## Precision / Recall Tradeoff
+### Precision / Recall Tradeoff
 
 Increasing precision will reduce recall and vice versa.
 
@@ -840,6 +840,7 @@ $$Gini=1-\sum^r_j p^2_j$$
 $p$ is the probability (often based on the frequency table)
 
 ## Entropy
+The level of "information" in a signal. Aka `Shanon Entropy`.
 [Wikipedia](https://en.wikipedia.org/wiki/Entropy_(information_theory))
 The entropy can explicitly be written as
 $${\displaystyle \mathrm {H} (X)=\sum _{i=1}^{n}{\mathrm {P} (x_{i})\,\mathrm {I} (x_{i})}=-\sum _{i=1}^{n}{\mathrm {P} (x_{i})\log _{b}\mathrm {P} (x_{i})},}$$
@@ -898,7 +899,7 @@ Note: The probability of the individual observation multiplied by the log of the
 * Similar to bagging apart from **Sampling without replacement**.
 
 ### [Boosting](https://en.wikipedia.org/wiki/Boosting_(machine_learning))
-You start with an equal weight and then once you have iterated, you increase the weighting of the weak classifiers and go round again. It iis seriel and learns fr omthe past becasue you have to wait for the previous iteration to finish. So it can take longer. 
+You start with an equal weight and then once you have iterated, you increase the weighting of the weak classifiers and go round again. It is seriel and learns from the past becasue you have to wait for the previous iteration to finish. So it can take longer. 
 * Train weak classifiers.
 * Add them to a final strong classifier by weighting. Weighting by accuracy (typically)
 * Once added, the data are reweighted
